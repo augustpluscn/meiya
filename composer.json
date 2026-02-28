@@ -1,0 +1,20 @@
+{
+    "name": "jmcc/meiya",
+    "description": "meiya api",
+    "require": {
+        "guzzlehttp/guzzle": "^7.0.1"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Jmcc\\Meiya\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "august",
+            "email": "1@augustor.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}

@@ -86,19 +86,4 @@ class Login extends BaseClient
         $password = sha1($input);
         return $password;
     }
-
-    public function setHeader(array $header = [])
-    {
-        $reg = Cache::get('reg');
-        $rsa = new Rsa('', '', '', $reg->spk);
-        $userEncrypt = $rsa->publicEncrypt((string)$this->userid);
-
-        $arr = [
-            'appid' => $this->appId,
-            'token' => $this->accessToken,
-            'userid' => $userEncrypt,
-            // 'Content-Type' => 'application/x-www-form-urlencoded;charset=utf-8',
-        ];
-        return array_merge($arr, $header);
-    }
 }

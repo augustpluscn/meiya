@@ -4,7 +4,7 @@ namespace Jmcc\Meiya;
 
 use Illuminate\Support\Facades\Cache;
 
-class Login extends BaseClient
+class MeiyaClient extends BaseClient
 {
     protected $baseUri;
     protected $signkey;

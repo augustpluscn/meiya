@@ -14,7 +14,7 @@ class MeiyaClient extends BaseClient
     protected $timeStamp;
     protected $companyId;
 
-    protected $token;
+    public $token;
 
     public function __construct($staffCode, $realName, $companyId, $passwordType = 0)
     {

@@ -16,7 +16,7 @@ class MeiyaClient extends BaseClient
 
     protected $token;
 
-    public function __construct($staffCode, $realName, $passwordType, $companyId)
+    public function __construct($staffCode, $realName, $companyId, $passwordType = 0)
     {
         $this->init();
 

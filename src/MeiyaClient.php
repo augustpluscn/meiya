@@ -18,12 +18,12 @@ class MeiyaClient extends BaseClient
 
     public function __construct($staffCode, $realName, $companyId, $passwordType = 0)
     {
-        $this->init();
 
         $this->staffCode = $staffCode;
         $this->realName = $realName;
         $this->passwordType = $passwordType;
         $this->companyId = $companyId;
+        $this->init();
     }
 
     protected function init(): void
@@ -35,7 +35,7 @@ class MeiyaClient extends BaseClient
         $milli = sprintf("%04d", ($now - floor($now)) * 10000); // 获取 4 位毫秒/微秒部分
         $this->timeStamp = date("YmdHis", $now) . $milli;
 
-        $this->accessToken = $this->getToken();
+        $this->token = $this->getToken();
     }
 
     protected function getToken()
